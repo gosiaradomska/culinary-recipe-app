@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Główna</title>
+    <!-- Link do stylów -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Nagłówek strony -->
+    <header class="bg-primary text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo i nazwa -->
+            <div class="d-flex align-items-center">
+                <img src="images/logo.png" alt="FoodLab Logo" class="logo me-2">
+                <h1 class="m-0">FoodLab</h1>
+            </div>
+
+            <!-- Wyszukiwarka -->
+            <form class="d-flex w-50">
+                <input class="form-control me-2" type="search" placeholder="Szukaj przepisów..." aria-label="Szukaj">
+                <button class="btn btn-light" type="submit">Szukaj</button>
+            </form>
+
+            <!-- Przyciski rejestracji i logowania -->
+            <div>
+                <button class="btn btn-outline-light me-2">Rejestracja</button>
+                <button class="btn btn-light">Logowanie</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Pasek z zakładkami -->
+    <nav class="bg-light">
+        <div class="container">
+            <ul class="nav justify-content-center py-2">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Strona Główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Przepisy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Przelicznik</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ulubione</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Sekcja wprowadzająca -->
+    <section class="jumbotron text-center bg-light p-5">
+        <div class="container">
+            <h2>Witamy w naszej aplikacji!</h2>
+            <p>Przeglądaj przepisy, zapisuj ulubione i twórz własne kulinarne dzieła!</p>
+            <a href="#" class="btn btn-primary btn-lg">Rozpocznij</a>
+        </div>
+    </section>
+
+    <!-- Lista funkcjonalności -->
+    <section class="container mt-5">
+        <h3>Co oferujemy?</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Przepisy</h4>
+                        <p class="card-text">Przeglądaj setki przepisów kulinarnych, które pasują do każdej okazji.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Dodawanie przepisów</h4>
+                        <p class="card-text">Podziel się swoimi ulubionymi przepisami z innymi użytkownikami.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ulubione</h4>
+                        <p class="card-text">Zapisuj przepisy w ulubionych, aby mieć je zawsze pod ręką.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2024 Moja Aplikacja Kulinarna</p>
+    </footer>
+
+    <!-- Skrypt JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
