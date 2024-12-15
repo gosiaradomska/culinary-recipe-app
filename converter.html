@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przelicznik Kuchenny</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Przelicznik Kuchenny</h1>
+  </header>
+  <main class="container py-4">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="value" class="form-label">Wartość</label>
+          <input type="number" id="value" class="form-control" placeholder="Wpisz wartość">
+        </div>
+        <div class="col-md-6">
+          <label for="unit" class="form-label">Jednostka</label>
+          <select id="unit" class="form-select">
+            <option value="grams">Gramy</option>
+            <option value="ml">Mililitry</option>
+            <option value="cups">Szklanki</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Przelicz</button>
+    </form>
+    <div class="mt-4">
+      <h5>Wynik: <span id="result">0</span></h5>
+    </div>
+  </main>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Przepisy Kulinarne. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

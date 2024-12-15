@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodLab - Strona Główna</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Logo */
+    .logo {
+      height: 120px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Wiersz górny */
+    .top-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    /* Wyszukiwarka */
+    .search-bar {
+      flex-grow: 1;
+      margin: 0 20px;
+    }
+
+    /* Menu główne */
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background-color: #f8f9fa;
+    }
+
+    .main-nav a {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .main-nav a:last-child {
+      border-right: none;
+    }
+
+    .main-nav a.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Lewa nawigacja */
+    .left-menu button {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nagłówek -->
+  <header class="bg-light">
+    <div class="container">
+      <!-- Górny wiersz: logo, wyszukiwarka, przyciski -->
+      <div class="top-menu">
+        <!-- Logo -->
+        <div>
+          <img src="logo.png" alt="FoodLab Logo" class="logo">
+        </div>
+
+        <!-- Wyszukiwarka -->
+        <form class="d-flex search-bar">
+          <input class="form-control me-2" type="search" placeholder="Wyszukaj przepisy..." aria-label="Wyszukaj">
+          <button class="btn btn-outline-secondary" type="submit">Szukaj</button>
+        </form>
+
+        <!-- Przyciski logowania -->
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
+        </div>
+      </div>
+
+      <!-- Menu główne -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favorites.html">Ulubione</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Zawartość strony -->
+  <div class="container d-flex mt-4">
+    <!-- Menu boczne -->
+    <aside class="left-menu me-4" style="width: 200px;">
+      <button class="btn btn-outline-dark w-100">Dodaj przepis</button>
+      <button class="btn btn-outline-dark w-100">Śniadania</button>
+      <button class="btn btn-outline-dark w-100">Przystawki</button>
+      <button class="btn btn-outline-dark w-100">Obiady</button>
+      <button class="btn btn-outline-dark w-100">Desery</button>
+      <button class="btn btn-outline-dark w-100">Kolacje</button>
+      <button class="btn btn-outline-dark w-100">Przekąski</button>
+      <button class="btn btn-outline-dark w-100">Napoje</button>
+    </aside>
+
+    <!-- Główna sekcja -->
+    <main class="flex-grow-1">
+      <h2 class="text-center border p-2 mb-4">Polecane przepisy</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 1</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 2</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 3</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 4</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Stopka -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <a href="#" class="text-white me-3">Mapa serwisu</a>
+      <a href="#" class="text-white me-3">FAQ</a>
+      <a href="#" class="text-white">Kontakt</a>
+    </div>
+  </footer>
+</body>
+</html>
