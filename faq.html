@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodLab - FAQ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nagłówek -->
+  <header>
+    <div class="container">
+      <div class="top-menu">
+        <div><img src="logo.png" alt="FoodLab Logo" class="logo"></div>
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
+        </form>
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
+        </div>
+      </div>
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favourites.html">Ulubione</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Zawartość -->
+  <div class="container d-flex mt-4">
+    <main class="flex-grow-1">
+      <h2 class="text-center border p-2 mb-4">Najczęściej Zadawane Pytania (FAQ)</h2>
+      <div class="accordion" id="faqAccordion">
+        <!-- Pytanie 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Jak dodać nowy przepis?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Aby dodać nowy przepis, kliknij przycisk „Dodaj przepis” w menu bocznym, wypełnij formularz i zatwierdź.
+            </div>
+          </div>
+        </div>
+        <!-- Pytanie 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Jak przeliczyć jednostki miar w przepisie?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Skorzystaj z zakładki „Przelicznik” w głównym menu, aby łatwo przeliczyć jednostki miar.
+            </div>
+          </div>
+        </div>
+        <!-- Pytanie 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Jak mogę edytować lub usunąć mój przepis?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Przepisy można edytować lub usunąć z poziomu zakładki „Ulubione” lub „Moje przepisy” w sekcji konta użytkownika.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Stopka -->
+  <footer>
+    <a href="map.html" class="text-white me-3">Mapa serwisu</a>
+    <a href="faq.html" class="text-white me-3">FAQ</a>
+    <a href="contact.html" class="text-white">Kontakt</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
