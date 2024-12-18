@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodLab - Regulamin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nagłówek -->
+  <header>
+    <div class="container">
+      <div class="top-menu">
+        <div><img src="logo.png" alt="FoodLab Logo" class="logo"></div>
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
+        </form>
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
+        </div>
+      </div>
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favourites.html">Ulubione</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Zawartość -->
+  <div class="container mt-4">
+    <h2 class="text-center border p-2 mb-4">Regulamin serwisu FoodLab</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Sekcja 1 -->
+        <h4>1. Postanowienia ogólne</h4>
+        <p>
+          Niniejszy regulamin określa zasady korzystania z serwisu FoodLab. Każdy użytkownik zobowiązany jest do zapoznania się z jego treścią przed rozpoczęciem korzystania z serwisu.
+        </p>
+
+        <!-- Sekcja 2 -->
+        <h4>2. Rejestracja i logowanie</h4>
+        <p>
+          Aby w pełni korzystać z serwisu, użytkownik powinien dokonać rejestracji poprzez podanie swojego adresu e-mail, imienia i nazwiska oraz ustalenie hasła. Logowanie odbywa się poprzez podanie adresu e-mail i hasła.
+        </p>
+
+        <!-- Sekcja 3 -->
+        <h4>3. Dodawanie przepisów</h4>
+        <p>
+          Zarejestrowani użytkownicy mogą dodawać przepisy kulinarne, które muszą spełniać określone standardy jakości oraz zawierać szczegółowy opis składników i sposobu przygotowania.
+        </p>
+
+        <!-- Sekcja 4 -->
+        <h4>4. Zasady korzystania z forum</h4>
+        <p>
+          Użytkownicy zobowiązują się do publikowania postów zgodnie z zasadami netykiety. Wszelkie treści obraźliwe, wulgarne lub niezgodne z prawem będą usuwane.
+        </p>
+
+        <!-- Sekcja 5 -->
+        <h4>5. Prawa autorskie</h4>
+        <p>
+          Wszystkie treści dodane przez użytkowników są ich własnością. FoodLab nie ponosi odpowiedzialności za naruszenia praw autorskich przez użytkowników.
+        </p>
+
+        <!-- Sekcja 6 -->
+        <h4>6. Postanowienia końcowe</h4>
+        <p>
+          FoodLab zastrzega sobie prawo do zmiany regulaminu w dowolnym czasie. O wszelkich zmianach użytkownicy zostaną poinformowani z odpowiednim wyprzedzeniem.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stopka -->
+  <footer class="text-center mt-4">
+    <a href="map.html" class="text-white me-3">Mapa serwisu</a>
+    <a href="faq.html" class="text-white me-3">FAQ</a>
+    <a href="contact.html" class="text-white">Kontakt</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
