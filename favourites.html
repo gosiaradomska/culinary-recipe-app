@@ -3,35 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ulubione Przepisy</title>
+  <title>FoodLab - Ulubione</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Nagłówek -->
-  <header class="bg-primary text-white py-3">
-    <!-- Wspólny nagłówek -->
-  </header>
-
-  <!-- Treść strony -->
-  <main class="container py-4">
-    <h2 class="text-center">Twoje Ulubione Przepisy</h2>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="recipe-image.jpg" class="card-img-top" alt="Przepis">
-          <div class="card-body">
-            <h5 class="card-title">Tytuł Przepisu</h5>
-            <a href="recipe-details.html" class="btn btn-primary">Zobacz</a>
-          </div>
+  <header>
+    <div class="container">
+      <!-- Top Menu -->
+      <div class="top-menu">
+        <div>
+          <img src="logo.png" alt="FoodLab Logo" class="logo">
+        </div>
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
+        </form>
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
         </div>
       </div>
+
+      
+      <!-- Przycisk rozwijanego menu dla urządzeń mobilnych -->
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+
+      <!-- Menu Główne -->
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favourites.html" class="active">Ulubione</a>
+      </nav>
     </div>
-  </main>
+  </header>
+
+  <!-- Zawartość strony -->
+  <div class="container d-flex mt-4">
+    <!-- Menu boczne -->
+    <aside class="left-menu me-4" style="width: 200px;">
+
+      <button class="btn btn-outline-dark w-100">Śniadania</button>
+      <button class="btn btn-outline-dark w-100">Przystawki</button>
+      <button class="btn btn-outline-dark w-100">Obiady</button>
+      <button class="btn btn-outline-dark w-100">Desery</button>
+      <button class="btn btn-outline-dark w-100">Kolacje</button>
+      <button class="btn btn-outline-dark w-100">Przekąski</button>
+      <button class="btn btn-outline-dark w-100">Napoje</button>
+    </aside>
+
+<!-- Główna sekcja -->
+<main class="flex-grow-1">
+  <h2 class="text-center border p-2 mb-4">Ulubione przepisy</h2>
+  <div class="row g-3">
+    <!-- Przykładowe przepisy -->
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 1">
+        <h5>Przepis 1</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 2">
+        <h5>Przepis 2</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 3">
+        <h5>Przepis 3</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 4">
+        <h5>Przepis 4</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 1">
+        <h5>Przepis 1</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 2">
+        <h5>Przepis 2</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 3">
+        <h5>Przepis 3</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 4">
+        <h5>Przepis 4</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 1">
+        <h5>Przepis 1</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 2">
+        <h5>Przepis 2</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 3">
+        <h5>Przepis 3</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="recipe-card">
+        <span class="heart-icon">&hearts;</span>
+        <img src="example.png" alt="Przepis 4">
+        <h5>Przepis 4</h5>
+      </div>
+    </div>
+    <!-- Dodaj więcej przepisów -->
+  </div>
+</main>
+</div>
 
   <!-- Stopka -->
-  <footer class="bg-dark text-white text-center py-3">
-    <!-- Wspólna stopka -->
+  <footer>
+    <div class="container">
+      <a href="#">Mapa serwisu</a>
+      <a href="#">FAQ</a>
+      <a href="#">Kontakt</a>
+    </div>
   </footer>
+
+
+  <script>
+    // Funkcja do rozwijanego menu
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>

@@ -3,39 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przelicznik Kuchenny</title>
+  <title>FoodLab - Przelicznik</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bg-primary text-white text-center py-3">
-    <h1>Przelicznik Kuchenny</h1>
-  </header>
-  <main class="container py-4">
-    <form>
-      <div class="row mb-3">
-        <div class="col-md-6">
-          <label for="value" class="form-label">Wartość</label>
-          <input type="number" id="value" class="form-control" placeholder="Wpisz wartość">
-        </div>
-        <div class="col-md-6">
-          <label for="unit" class="form-label">Jednostka</label>
-          <select id="unit" class="form-select">
-            <option value="grams">Gramy</option>
-            <option value="ml">Mililitry</option>
-            <option value="cups">Szklanki</option>
-          </select>
+  <!-- Nagłówek -->
+  <header>
+    <div class="container">
+      <div class="top-menu">
+        <div><img src="logo.png" alt="FoodLab Logo" class="logo"></div>
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
+        </form>
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary w-100">Przelicz</button>
-    </form>
-    <div class="mt-4">
-      <h5>Wynik: <span id="result">0</span></h5>
+      <!-- Przycisk rozwijanego menu -->
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html" class="active">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favourites.html">Ulubione</a>
+      </nav>
     </div>
-  </main>
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Przepisy Kulinarne. Wszelkie prawa zastrzeżone.</p>
+  </header>
+
+  <!-- Zawartość główna -->
+  <div class="container d-flex mt-4">
+
+    <!-- Przelicznik -->
+    <main class="flex-grow-1">
+      <h2 class="text-center border p-2 mb-4">Przelicznik kuchenny</h2>
+
+      <div class="p-4 border rounded bg-light">
+        <!-- Wybór produktu -->
+        <div class="mb-3 d-flex align-items-center">
+          <label for="product" class="me-2 fw-bold">Wybierz produkt:</label>
+          <select id="product" class="form-select w-auto">
+            <option value="">-- Wybierz --</option>
+            <option>Mąka pszenna</option>
+            <option>Cukier</option>
+            <option>Cukier puder</option>
+          </select>
+          <span class="ms-3">np. <a href="#" class="text-decoration-underline">Mąka pszenna</a></span>
+        </div>
+
+        <!-- Objętość i Waga -->
+        <div class="row">
+          <div class="col-md-6">
+            <h5 class="text-center text-orange">Objętość</h5>
+            <div class="mb-2 d-flex justify-content-between">
+              <input type="text" class="form-control" placeholder="ML">
+              <input type="text" class="form-control" placeholder="Szklanek">
+            </div>
+            <div class="d-flex justify-content-between">
+              <input type="text" class="form-control" placeholder="Łyżek">
+              <input type="text" class="form-control" placeholder="Łyżeczek">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-center text-orange">Waga</h5>
+            <input type="text" class="form-control mb-2" placeholder="GRAM">
+          </div>
+        </div>
+
+        <p class="mt-3 text-muted">Sprawdź ile waży mąka, cukier, itp.</p>
+      </div>
+
+      <!-- Przelicznik foremek -->
+      <h3 class="mt-5 mb-3 text-center">Przelicznik Foremek</h3>
+      <div class="row">
+        <div class="col-md-6 border p-3 bg-light rounded">
+          <h6>W przepisie jest:</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="recipeForm" id="form" checked>
+            <label class="form-check-label" for="form">Foremka</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="recipeForm" id="tortownica">
+            <label class="form-check-label" for="tortownica">Tortownica</label>
+          </div>
+          <div class="d-flex mt-2">
+            <input type="number" class="form-control me-2" placeholder="Wysokość">
+            <input type="number" class="form-control" placeholder="Szerokość">
+          </div>
+        </div>
+        <div class="col-md-6 border p-3 bg-light rounded">
+          <h6>W domu mam:</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="homeForm" id="homeForm">
+            <label class="form-check-label" for="homeForm">Foremka</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="homeForm" id="homeTortownica">
+            <label class="form-check-label" for="homeTortownica">Tortownica</label>
+          </div>
+          <div class="d-flex mt-2">
+            <input type="number" class="form-control me-2" placeholder="Wysokość">
+            <input type="number" class="form-control" placeholder="Szerokość">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary mt-3 w-100">Przelicz</button>
+    </main>
+  </div>
+
+   <!-- Stopka -->
+   <footer>
+    <a href="#" class="text-white me-3">Mapa serwisu</a>
+    <a href="#" class="text-white me-3">FAQ</a>
+    <a href="#" class="text-white">Kontakt</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>

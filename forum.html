@@ -3,37 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum</title>
+  <title>FoodLab - Forum</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Nagłówek -->
-  <header class="bg-primary text-white py-3">
-    <!-- Wspólny nagłówek -->
+  <header>
+    <div class="container">
+      <div class="top-menu">
+        <!-- Logo -->
+        <div>
+          <img src="logo.png" alt="FoodLab Logo" class="logo">
+        </div>
+
+        <!-- Wyszukiwarka -->
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
+        </form>
+
+        <!-- Przyciski logowania -->
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
+        </div>
+      </div>
+
+      <!-- Przycisk rozwijanego menu dla urządzeń mobilnych -->
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+
+      <!-- Menu główne -->
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html" class="active">Forum</a>
+        <a href="favourites.html">Ulubione</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Treść strony -->
-  <main class="container py-4">
-    <h2 class="text-center">Forum Kulinarne</h2>
-    <div class="mt-4">
-      <h5>Ostatnie Wątki</h5>
-      <ul class="list-group">
-        <li class="list-group-item">
-          <a href="#" class="text-decoration-none">Jak zrobić idealne ciasto drożdżowe?</a>
-          <p class="text-muted small">Utworzono przez: Jan Kowalski, 3 dni temu</p>
-        </li>
-        <li class="list-group-item">
-          <a href="#" class="text-decoration-none">Przepisy na szybkie śniadanie</a>
-          <p class="text-muted small">Utworzono przez: Anna Nowak, 1 tydzień temu</p>
-        </li>
-      </ul>
-    </div>
-  </main>
+  <!-- Zawartość strony -->
+  <div class="container d-flex mt-4">
+
+    <!-- Sekcja Forum -->
+    <main class="flex-grow-1">
+      <h2 class="text-center border p-2 mb-4">Witamy na forum kulinarnym FoodLab!</h2>
+      <!-- Lista tematów w okienkach -->
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card custom-button">
+            <div class="card-body">
+              <h5 class="card-title">Pomysły na śniadania</h5>
+              <p class="card-text">Podziel się przepisami na zdrowe śniadania!</p>
+              <a href="#" class="btn btn-outline-dark">Przeglądaj</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card custom-button">
+            <div class="card-body">
+              <h5 class="card-title">Ulubione desery</h5>
+              <p class="card-text">Który deser jest Twoim ulubionym?</p>
+              <a href="#" class="btn btn-outline-dark">Przeglądaj</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card custom-button">
+            <div class="card-body">
+              <h5 class="card-title">Szybkie obiady</h5>
+              <p class="card-text">Szukasz inspiracji na szybki obiad?</p>
+              <a href="#" class="btn btn-outline-dark">Przeglądaj</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="card custom-button">
+            <div class="card-body">
+              <h5 class="card-title">Pomysły na przekąski</h5>
+              <p class="card-text">Idealne przekąski na imprezy i codzienność.</p>
+              <a href="#" class="btn btn-outline-dark">Przeglądaj</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <!-- Stopka -->
-  <footer class="bg-dark text-white text-center py-3">
-    <!-- Wspólna stopka -->
+  <footer>
+    <a href="#">Mapa serwisu</a>
+    <a href="#">FAQ</a>
+    <a href="#">Kontakt</a>
   </footer>
+
+  <script>
+    // Funkcja do rozwijanego menu
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>

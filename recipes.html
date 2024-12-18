@@ -3,66 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przepisy</title>
+  <title>FoodLab - Przepisy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="bg-primary text-white text-center py-3">
-    <h1>Wszystkie Przepisy</h1>
-  </header>
-  <main class="container py-4">
-    <div class="row">
-      <!-- Filtry -->
-      <div class="col-md-3">
-        <h5>Filtruj przepisy</h5>
-        <form>
-          <div class="mb-3">
-            <label for="category" class="form-label">Kategoria</label>
-            <select id="category" class="form-select">
-              <option value="">Wszystkie</option>
-              <option value="breakfast">Śniadania</option>
-              <option value="lunch">Obiady</option>
-              <option value="dessert">Desery</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="ingredient" class="form-label">Składnik</label>
-            <input type="text" id="ingredient" class="form-control" placeholder="Np. czekolada">
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Filtruj</button>
+  <!-- Nagłówek -->
+  <header>
+    <div class="container">
+      <div class="top-menu">
+        <div>
+          <img src="logo.png" alt="FoodLab Logo" class="logo">
+        </div>
+        <form class="d-flex search-bar">
+          <input class="form-control" type="search" placeholder="Wyszukaj..." aria-label="Wyszukaj">
         </form>
-      </div>
-      <!-- Lista przepisów -->
-      <div class="col-md-9">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h5>Przepisy</h5>
-          <select id="sort" class="form-select w-25">
-            <option value="date">Najnowsze</option>
-            <option value="popularity">Najpopularniejsze</option>
-            <option value="time">Czas przygotowania</option>
-          </select>
-        </div>
-        <div class="row">
-          <!-- Przykładowy przepis -->
-          <div class="col-md-4">
-            <div class="card mb-3">
-              <img src="recipe-image.jpg" class="card-img-top" alt="Przepis">
-              <div class="card-body">
-                <h5 class="card-title">Tytuł Przepisu</h5>
-                <p class="card-text">Krótki opis przepisu.</p>
-                <a href="recipe-details.html" class="btn btn-primary">Zobacz więcej</a>
-              </div>
-            </div>
-          </div>
-          <!-- Dodaj więcej przepisów tutaj -->
+        <div>
+          <a href="register.html" class="btn btn-outline-primary me-2">Rejestracja</a>
+          <a href="login.html" class="btn btn-outline-success">Logowanie</a>
         </div>
       </div>
+      <!-- Przycisk rozwijanego menu -->
+      <button class="menu-toggle d-block d-md-none">MENU</button>
+      <!-- Menu główne -->
+      <nav class="main-nav">
+        <a href="index.html">Strona główna</a>
+        <a href="recipes.html" class="active">Przepisy</a>
+        <a href="converter.html">Przelicznik</a>
+        <a href="forum.html">Forum</a>
+        <a href="favourites.html">Ulubione</a>
+      </nav>
     </div>
-  </main>
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Przepisy Kulinarne. Wszelkie prawa zastrzeżone.</p>
+  </header>
+
+  <!-- Zawartość -->
+  <div class="container d-flex mt-4">
+    <!-- Menu boczne -->
+    <aside class="left-menu me-4" style="width: 200px;">
+      <button class="btn btn-outline-dark w-100">Dodaj przepis</button>
+      <button class="btn btn-outline-dark w-100">Śniadania</button>
+      <button class="btn btn-outline-dark w-100">Przystawki</button>
+      <button class="btn btn-outline-dark w-100">Obiady</button>
+      <button class="btn btn-outline-dark w-100">Desery</button>
+      <button class="btn btn-outline-dark w-100">Kolacje</button>
+      <button class="btn btn-outline-dark w-100">Przekąski</button>
+      <button class="btn btn-outline-dark w-100">Napoje</button>
+    </aside>
+
+    <!-- Treść podstrony -->
+    <main class="flex-grow-1">
+      <h2 class="text-center border p-2 mb-4">Przepisy</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 1</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 2</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 3</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 4</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 5</div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="border p-4 text-center">Przepis 6</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Stopka -->
+  <footer>
+    <a href="#" class="text-white me-3">Mapa serwisu</a>
+    <a href="#" class="text-white me-3">FAQ</a>
+    <a href="#" class="text-white">Kontakt</a>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
