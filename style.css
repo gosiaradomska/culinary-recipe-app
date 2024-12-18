@@ -1,112 +1,257 @@
+/* Ustawienia główne */
+html, body { /* Ustawienie wysokości na 100% i konfiguracja układu Flexbox */
+  height: 100%; /* Wysokość 100% dla pełnego wypełnienia okna przeglądarki */
+  margin: 0; /* Brak marginesów wokół */
+  display: flex; /* Użycie Flexboxa dla układu */
+  flex-direction: column; /* Ustawienie elementów w kolumnie */
+}
+
+.container { /* Stylizacja głównego kontenera */
+  flex-grow: 1; /* Pozwala kontenerowi rosnąć, aby wypełnić przestrzeń */
+}
+
 /* Logo */
-.logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+.logo { /* Stylizacja logo strony */
+  height: 120px; /* Wysokość logo */
+  display: block; /* Ustawienie jako blokowy element */
+  margin: 0 auto; /* Wycentrowanie logo */
 }
 
-/* Nagłówek */
-header {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-size: 1.8em;
-    font-weight: bold;
-    margin: 0;
-    color: #fff;
+/* Wiersz górny */
+.top-menu { /* Stylizacja górnego menu */
+  display: flex; /* Użycie Flexboxa dla układu poziomego */
+  align-items: center; /* Wyrównanie elementów w pionie */
+  justify-content: space-between; /* Rozłożenie elementów równomiernie */
+  padding: 10px 0; /* Dodanie odstępów wewnętrznych */
 }
 
 /* Wyszukiwarka */
-form .form-control {
-    border-radius: 20px;
+.search-bar { /* Stylizacja paska wyszukiwania */
+  flex-grow: 0.5; /* Ustawienie paska na pół szerokości dostępnej przestrzeni */
+  margin: 0 20px; /* Dodanie odstępów po bokach */
+  position: relative; /* Relatywne pozycjonowanie dla elementów wewnętrznych */
 }
 
-form .btn {
-    border-radius: 20px;
+.search-bar input { /* Stylizacja pola tekstowego w wyszukiwarce */
+  padding-right: 30px; /* Dodanie miejsca po prawej stronie */
+}
+
+.search-bar::after { /* Stylizacja ikony lupy w pasku wyszukiwania */
+  content: '\1F50D'; /* Unicode dla ikonki lupy */
+  font-size: 1.2rem; /* Wielkość ikony */
+  position: absolute; /* Absolutne pozycjonowanie */
+  right: 10px; /* Odstęp od prawej krawędzi */
+  top: 50%; /* Wyśrodkowanie w pionie */
+  transform: translateY(-50%); /* Korekta wyśrodkowania */
+  color: #6c757d; /* Kolor ikony */
+  pointer-events: none; /* Wyłączenie interakcji */
+}
+
+/* Menu główne */
+.main-nav { /* Stylizacja głównego menu */
+  display: flex; /* Użycie Flexboxa dla układu poziomego */
+  justify-content: center; /* Wycentrowanie menu */
+  border: 2px solid #ccc; /* Dodanie obramowania */
+  background-color: #f8f9fa; /* Tło menu */
+  border-radius: 10px; /* Zaokrąglenie krawędzi */
+  overflow: hidden; /* Ukrycie zawartości wykraczającej poza krawędzie */
+}
+
+.main-nav a { /* Stylizacja linków w menu */
+  flex: 1; /* Równe rozłożenie szerokości między linkami */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  padding: 10px; /* Odstępy wewnętrzne */
+  border-right: 2px solid #ccc; /* Dodanie prawego obramowania */
+  text-decoration: none; /* Usunięcie podkreślenia */
+  color: black; /* Kolor tekstu */
+  font-weight: bold; /* Pogrubienie tekstu */
+  transition: background-color 0.3s ease; /* Płynne przejście koloru tła */
+}
+
+.main-nav a:last-child { /* Stylizacja ostatniego linku w menu */
+  border-right: none; /* Brak prawego obramowania */
+}
+
+.main-nav a.active { /* Stylizacja aktywnego linku w menu */
+  background-color: #ecb54f; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+}
+
+/* Lewa nawigacja */
+.left-menu button { /* Stylizacja przycisków w lewej nawigacji */
+  margin-bottom: 10px; /* Odstęp dolny między przyciskami */
+  border-radius: 10px; /* Zaokrąglenie krawędzi */
+  background-color: #f8f9fa; /* Kolor tła */
+  transition: background-color 0.3s ease; /* Płynne przejście koloru tła */
+}
+
+.left-menu button:hover { /* Stylizacja przycisków po najechaniu */
+  background-color: #ecb54f; /* Kolor tła */
+  color: white; /* Kolor tekstu */
 }
 
 /* Przyciski rejestracji i logowania */
-button {
-    border-radius: 20px;
-    padding: 5px 15px;
+.btn-outline-primary { /* Stylizacja przycisków rejestracji */
+  border-color: #f07c7c; /* Kolor obramowania */
+  color: #000000; /* Kolor tekstu */
 }
 
-button.btn-outline-light {
-    border: 2px solid #fff;
-    color: #fff;
+.btn-outline-primary:hover { /* Stylizacja przycisków rejestracji po najechaniu */
+  background-color: #f07c7c; /* Kolor tła */
+  color: white; /* Kolor tekstu */
 }
 
-button.btn-outline-light:hover {
-    background-color: #fff;
-    color: #333;
+.btn-outline-success { /* Stylizacja przycisków logowania */
+  border-color: #42d6ca; /* Kolor obramowania */
+  color: #000000; /* Kolor tekstu */
 }
 
-button.btn-light {
-    color: #333;
-    background-color: #fff;
-    border: none;
+.btn-outline-success:hover { /* Stylizacja przycisków logowania po najechaniu */
+  background-color: #42d6ca; /* Kolor tła */
+  color: white; /* Kolor tekstu */
 }
 
-button.btn-light:hover {
-    background-color: #f0f0f0;
-}
+/* Rozwijane menu dla urządzeń mobilnych */
+@media (max-width: 768px) { /* Stylizacja dla małych ekranów */
+  .main-nav { /* Ukrycie menu głównego */
+    display: none; /* Brak wyświetlania */
+  }
 
-/* Pasek nawigacyjny */
-nav {
-    border-bottom: 2px solid #ddd;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
+  .menu-toggle { /* Stylizacja przycisku rozwijania menu */
+    display: block; /* Wyświetlanie przycisku */
+    width: 100%; /* Szerokość na całą stronę */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    background-color: #f8f9fa; /* Kolor tła */
+    color: black; /* Kolor tekstu */
+    font-size: 1rem; /* Wielkość tekstu */
+    padding: 10px; /* Odstępy wewnętrzne */
+    border: 2px solid #ccc; /* Obramowanie */
+    border-radius: 10px; /* Zaokrąglenie krawędzi */
+    cursor: pointer; /* Wskazanie kursora */
+    font-weight: bold; /* Pogrubienie tekstu */
+  }
 
-nav .nav-link {
-    font-size: 1.1em;
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-}
+  .menu-toggle:hover { /* Stylizacja przycisku po najechaniu */
+    background-color: #e2e6ea; /* Kolor tła */
+  }
 
-nav .nav-link:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
-}
+  .main-nav.show { /* Stylizacja rozwiniętego menu */
+    display: flex; /* Wyświetlenie menu */
+    flex-direction: column; /* Ustawienie elementów w kolumnie */
+    border-radius: 10px; /* Zaokrąglenie krawędzi */
+    overflow: hidden; /* Ukrycie zawartości wykraczającej poza krawędzie */
+  }
 
-nav .nav-link.active {
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-}
+  .main-nav a { /* Stylizacja linków w rozwiniętym menu */
+    border-bottom: 1px solid #ccc; /* Dodanie dolnego obramowania */
+  }
 
-
-
-/* Sekcja wprowadzająca */
-.jumbotron h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
-}
-
-.jumbotron p {
-    font-size: 1.1em;
-    margin-bottom: 1.5rem;
-}
-
-/* Funkcjonalności */
-.card {
-    border: none;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-title {
-    font-size: 1.5em;
-    margin-bottom: 0.5rem;
+  .main-nav a:last-child { /* Stylizacja ostatniego linku w rozwiniętym menu */
+    border-bottom: none; /* Brak dolnego obramowania */
+  }
 }
 
 /* Stopka */
-footer {
-    font-size: 0.9em;
+footer { /* Stylizacja stopki */
+  background-color: #7edda2e5; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  padding: 15px 0; /* Odstępy wewnętrzne */
+  margin-top: auto; /* Przyklejenie stopki do dołu */
+}
+
+footer a { /* Stylizacja linków w stopce */
+  color: white; /* Kolor tekstu */
+  text-decoration: none; /* Usunięcie podkreślenia */
+  margin-right: 15px; /* Odstęp między linkami */
+}
+
+footer a:last-child { /* Stylizacja ostatniego linku w stopce */
+  margin-right: 0; /* Brak odstępu po prawej stronie */
+}
+
+footer a:hover { /* Stylizacja linków w stopce po najechaniu */
+  color: #fdd5b1; /* Pastelowy kolor tekstu */
+}
+
+
+/* Styl dla kart */
+.custom-button {
+  background-color: #ffffff; 
+  border: none;
+  border-radius: 10px; /* Zaokrąglenie */
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #f07c7c; /* Ciemniejszy brzoskwiniowy */
+  color: white;
+}
+
+/* Przyciski Przeglądaj */
+.btn-outline-dark {
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ffffff;
+  border-color: #f07c7c;
+  color: black;
+}
+
+
+
+
+/* Kwadraty z przepisami */
+.recipe-card {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.recipe-card h5 {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Ikonka serca */
+.recipe-card .heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+.recipe-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
 }
